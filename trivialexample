@@ -1,0 +1,30 @@
+#!/bin/bash
+#
+# Michael Shafae
+# mshafae@fullerton.edu
+# CPSC 254-99
+#
+# A trivial example shell script to demonstrate good formatting and command
+# line processing as demonstrated in class.
+#
+
+function usage () {
+  echo "Usage:"
+  echo "  ${1} parameter1 parameter2  parameter3..."
+  echo
+  echo "  Include at least one parameter and the script will loop through"
+  echo "  each parameter, printing the parameter to stdout."
+}
+
+#
+# Main
+#
+SCRIPTNAME=`basename ${0}`
+
+if [ ${#} -lt 1 ]; then
+  usage ${SCRIPTNAME}
+fi
+
+for PARAMETER in ${*}; do
+  echo "${PARAMETER}"
+done
