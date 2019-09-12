@@ -28,4 +28,5 @@ fi
 
 for PARAMETER in ${*}; do
   echo "${PARAMETER}"
+  mogrify -resize 1024x ${PARAMETER}
 done
