@@ -21,12 +21,20 @@ function usage () {
 # Main
 #
 SCRIPTNAME=`basename ${0}`
-
+MAXWIDTH=1024
 if [ ${#} -lt 1 ]; then
   usage ${SCRIPTNAME}
 fi
 
 for PARAMETER in ${*}; do
+
+  IMAGE=`identify ${PARAMETER} | cut -c 36-39`
+
+  #IMAGE2='expr  $ZERO'
+  if [ ${IMAGE} -gt ${MAXWIDTH} ]; then
+  echo ${IMAGE}
   echo "${PARAMETER}"
   mogrify -resize 1024x ${PARAMETER}
+  fi
+
 done
