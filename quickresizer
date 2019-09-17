@@ -29,7 +29,7 @@ fi
 for PARAMETER in ${*}; do
 
   IMAGE=`identify ${PARAMETER} | cut -c 36-39`
-
+  echo ${IMAGE}
   #IMAGE2='expr  $ZERO'
   if [ ${IMAGE} -gt ${MAXWIDTH} ]; then
   echo ${IMAGE}
