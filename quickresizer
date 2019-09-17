@@ -1,12 +1,11 @@
 #!/bin/bash
 #
-# Michael Shafae
-# mshafae@fullerton.edu
+# Luan Nguyen
+# tonguyen500@csu.fullerton.edu
 # CPSC 254-99
 #
-#sadsadsad
-# A trivial example shell script to demonstrate good formatting and command
-# line processing as demonstrated in class.
+#quickresizer
+# A shell to resize images to 1024 width if it exceed 1024 pixels using Imagemagick
 #
 
 function usage () {
